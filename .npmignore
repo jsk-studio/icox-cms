@@ -1,0 +1,11 @@
+src/
+lib-src/
+node_modules/
+dist/**/*.map
+.gitattributes
+.gitignore
+.prettierrc
+tsconfig.json
+tsconfig.prod.json
+tslint.json
+yarn.lock

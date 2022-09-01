@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+    "outDir": "./dist",
+      "target": "ES6",
+      "module": "CommonJS",
+      "moduleResolution": "Node",
+      "declaration": true,
+      "strict": true,
+      "noImplicitAny": true,
+      "pretty": true,
+      "sourceMap": false,
+      "esModuleInterop": true,
+      "noUnusedLocals": false,
+      "noUnusedParameters": false,
+      "allowSyntheticDefaultImports": true,
+      "noFallthroughCasesInSwitch": true,
+      "baseUrl": "./lib-src",
+      "incremental": true,
+      "lib": ["ESNext", "DOM"],
+      "skipLibCheck": true,
+      "importHelpers": true
+    },
+    "include": [
+        "lib-src/**/*.ts",
+        "lib-src/**/*.tsx",
+        "lib-src/**/*.vue",
+    ],
+      "exclude": [
+        "node_modules"
+      ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "@bilibili-bbq/cox-quick",
+  "version": "0.0.4",
+  "private": false,
+  "main": "dist/index.js",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "help": "vue-cli-service help build",
+    "build:lib": "npm run build:tsc",
+    "build:tsc": "tsc -p tsconfig.prod.json",
+    "build:vue": "vue-cli-service build --mode lib --target lib --name cox lib-src/index.ts"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-router": "^4.5.13",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-plugin-vuex": "^4.5.13",
+    "@vue/cli-service": "^4.5.13",
+    "@vue/compiler-sfc": "^3.2.2",
+    "sass": "^1.51.0",
+    "sass-loader": "^8.0.2",
+    "typescript": "~4.1.5"
+  },
+  "dependencies": {
+    "@bilibili-bbq/cox": "^0.0.4",
+    "@types/lodash": "^4.14.184",
+    "element-plus": "^1.1.0-beta.24",
+    "lodash": "^4.17.21",
+    "tslib": "^2.4.0",
+    "vue": "^3.2.23",
+    "vue-router": "^4.0.11",
+    "vuex": "^4.0.2"
+  }
+}
