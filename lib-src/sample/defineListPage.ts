@@ -3,8 +3,9 @@ import { cloneDeep } from 'lodash'
 import { tryCall, createCombineList, FaasParams } from '@bilibili-bbq/cox'
 import { common, page_list_raw } from './mapping'
 import { x_array } from './x'
+import { getCoxAppState } from './register'
 
-const { store, router, page_list = {} } = common
+// const { store, router, page_list = {} } = common
 
 
 type IListPageAttrs = {
@@ -83,9 +84,10 @@ export function defineListPage(opts: IDefineListPage) {
             }
         }
     }
+    const coxState = getCoxAppState()
     opts.pool.flavors = [
         page_list_raw,
-        page_list,
+        coxState.renders.page_list,
         ...opts.pool?.flavors,
         ...x_array(opts.raw)
     ]

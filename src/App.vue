@@ -4,12 +4,10 @@
   </template>
 <script setup lang="ts">
 import { TreeRender, DialogLayer } from "@bilibili-bbq/cox"
-import { computed, reactive } from "vue";
-import { sidebar } from './sidebar'
-
+import { reactive } from "vue";
+import { useSidebarTree } from '../lib-src'
 const state = reactive({ loading: true })
-
-const renderTree = computed(() => sidebar.allMatch)
+const renderTree = useSidebarTree()
 
 setTimeout(() => {
     state.loading = false

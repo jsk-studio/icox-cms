@@ -11,8 +11,6 @@ const routes = [{
    
 }]
 
-console.log(21212)
-
 export const sidebar = defineSidebarRouter({
     routes,
     title: 'cox test',

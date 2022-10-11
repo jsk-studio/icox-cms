@@ -37,10 +37,10 @@
   resolved "https://registry.npmmirror.com/@babel/parser/-/parser-7.18.13.tgz#5b2dd21cae4a2c5145f1fbd8ca103f9313d3b7e4"
   integrity sha512-dgXcIfMuQ0kgzLB2b9tRZs7TTFFaGM2AbtA4fJgUUYukzGH4jwsS7hzQHEGs67jdehpm22vkgKwvbU+aEflgwg==
 
-"@bilibili-bbq/cox@^0.0.4":
-  version "0.0.4"
-  resolved "http://registry.npm.bilibili.co/@bilibili-bbq/cox/download/@bilibili-bbq/cox-0.0.4.tgz#7e625597ea89569e0cd5c850980dc1e9c629de59"
-  integrity sha1-fmJVl+qJVp4M1chQmA3B6cYp3lk=
+"@bilibili-bbq/cox@^0.0.9":
+  version "0.0.9"
+  resolved "http://registry.npm.bilibili.co/@bilibili-bbq/cox/download/@bilibili-bbq/cox-0.0.9.tgz#e4ae25abcc1ecf3923b052215b477717aefc9e14"
+  integrity sha1-5K4lq8wezzkjsFIhW0d3F678nhQ=
   dependencies:
     "@types/lodash" "^4.14.184"
     lodash "^4.17.21"

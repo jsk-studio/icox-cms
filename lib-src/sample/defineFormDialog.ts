@@ -1,9 +1,7 @@
 import { cloneDeep } from 'lodash'
 import { tryCall, createCombineList, FaasParams } from '@bilibili-bbq/cox'
 import { mergeBizMaterialList, mergeBizMaterialDetail } from './utils'
-import { common } from './mapping'
-
-const { store, router, dialog_form = {} } = common
+import { getCoxAppState } from './register'
 
 type IDefineFormDialogAttrs = {
     title?: string, // 弹窗标题
@@ -28,8 +26,9 @@ export function defineFormDialog(opts: IDefineFormDialog) {
         // @ts-ignore
         opts.pool = cloneDeep(store.state['[scope]faas'].pool)
     }
+    const coxState = getCoxAppState()
     opts.pool.flavors = [
-        dialog_form,
+        coxState.renders.dialog_form,
         ...opts.pool?.flavors,
     ]
     const aspect = (name: string, combined: any, ctx: any = {}) => {

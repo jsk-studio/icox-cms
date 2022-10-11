@@ -1,6 +1,10 @@
 export const common = {
 } as any
 
+export const renders = {
+} as any
+
+
 export const components = {
 } as any
 

@@ -1,7 +1,7 @@
 import { createCombineList, FaasParams } from '@bilibili-bbq/cox'
 import { mergeBizMaterialList } from './utils'
 // import CoverSort from '@/components/base/sort/CoverSort.vue'
-import { components } from './mapping'
+import { getCoxAppState } from './register'
 
 type ISortContext = FaasParams & {
     params: { query: any } // sort 页 query, 如 pager 信息
@@ -43,7 +43,8 @@ export type IDefineCoverSortPage = {
 }
 
 export function defineCoverSort(opts: IDefineCoverSortPage) {
-    const { CoverSort } = components
+    const coxState = getCoxAppState()
+    const { CoverSort } = coxState.components
     let render = CoverSort
     if (opts.render) {
         render = opts.render

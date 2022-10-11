@@ -1,27 +1,13 @@
-import 'element-plus/dist/index.css'
-import '@bilibili-bbq/cox/dist/index.css'
-import { createStore } from 'vuex';
-import { createRouter, createWebHistory } from 'vue-router';
-import { createCoxApp, registCoxComponents } from '../lib-src';
-
-registCoxComponents({ Header: null })
-
+import './register'
+import { createCoxApp } from '../lib-src';
 import App from "./App.vue";
-import { sidebar } from './sidebar';
-
-const store = createStore({})
-
-const router = createRouter({
-    history: createWebHistory(),
-    routes: sidebar.routes,
-})
-
+import { sidebar } from './sidebar'
+import { router } from './router'
 // 初始化
 init();
 
 async function init() {
-    const coxOpts = { router, store }
-    createCoxApp(App, coxOpts)
+    createCoxApp(App, { sidebar, router })
         .mount("#app")
 }
 

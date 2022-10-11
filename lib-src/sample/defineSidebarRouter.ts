@@ -1,7 +1,6 @@
 import { TreeRender } from '@bilibili-bbq/cox'
-// import Header from '@/components/layout/Header.vue'
 import { x_array } from './x'
-import { components } from './mapping'
+import { getCoxAppState } from './register'
 
 type ISidebarNode = {
     children?: ISidebarNode[],
@@ -41,7 +40,8 @@ type ISidebarPageOptions = {
 
 
 function createSidebarPage(opts: ISidebarPageOptions) {
-  const { Header } = components
+  const coxState = getCoxAppState()
+  const { Header } = coxState.components
   const { title, allMenus, menu, nosidebar } = opts
   return {
       type: 'Page',
@@ -61,7 +61,8 @@ function createSidebarPage(opts: ISidebarPageOptions) {
 }
 
 function createNosidebarTree() {
-  const { Header } = components
+  const coxState = getCoxAppState()
+  const { Header } = coxState.components
   const nosidebarTree = {
     type: 'Page',
     slots: [{

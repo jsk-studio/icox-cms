@@ -1,8 +1,9 @@
 import { tryCall, createCombineList, FaasParams } from '@bilibili-bbq/cox'
 import { mergeBizMaterialList, mergeBizMaterialDetail } from './utils'
+import { getCoxAppState } from './register'
 import { common } from './mapping'
 
-const { store, router, page_detail = {} } = common
+// const { store, router, page_detail = {} } = common
 
 type IDetailSubmitContext = FaasParams & {
     data: any, // 根据页面展示过滤后的表单数据
@@ -41,9 +42,10 @@ export type IDefineDetailPage = {
 }
 
 export function defineDetailPage(opts: IDefineDetailPage) {
+    const coxState = getCoxAppState()
     let render = tryCall(opts.render, opts)
     opts.pool.flavors = [
-        page_detail,
+        coxState.renders.page_detail,
         ...opts.pool?.flavors,
     ]
     const aspect = (name: string, combined: any, ctx: any = {}) => {
