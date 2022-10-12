@@ -26,7 +26,7 @@ export function x_array(value: any, opts = {} as any) {
     if (!value) {
         return empty;
     }
-    return empty.concat(value).filter(v => x_empty(v, opts));
+    return empty.concat(value).filter(v => !x_empty(v, opts));
 }
 
 const EMPTIES = [null, undefined, NaN, '']

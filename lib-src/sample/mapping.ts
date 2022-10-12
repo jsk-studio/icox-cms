@@ -1,13 +1,3 @@
-export const common = {
-} as any
-
-export const renders = {
-} as any
-
-
-export const components = {
-} as any
-
 
 export const page_list_raw = {
     filter: [{

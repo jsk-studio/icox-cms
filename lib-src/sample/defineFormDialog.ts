@@ -1,7 +1,6 @@
 import { cloneDeep } from 'lodash'
-import { tryCall, createCombineList, FaasParams } from '@bilibili-bbq/cox'
+import { tryCall, createCombineList, getCoxAppState } from '@bilibili-bbq/cox'
 import { mergeBizMaterialList, mergeBizMaterialDetail } from './utils'
-import { getCoxAppState } from './register'
 
 type IDefineFormDialogAttrs = {
     title?: string, // 弹窗标题

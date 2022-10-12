@@ -1,9 +1,10 @@
-import { defineSidebarRouter } from '../lib-src'
+import { defineSidebarRouter } from '@bilibili-bbq/cox'
 
 const routes = [{
     name: 'MaterialList',
     path: '/material-list',
     load: () => import('./list-page'),
+    status: ['nosidebar']
 }, {
     name: 'MaterialList2',
     path: '/material-list2',
@@ -19,7 +20,4 @@ export const sidebar = defineSidebarRouter({
       { title: '素材库|【自研】素材库', route: 'MaterialList' },
       { title: '素材库|【自研】素材库2', route: 'MaterialList2' },
     ],
-    mapping: {
-        0: ['MaterialList', 'MaterialList2']
-    }
 })
