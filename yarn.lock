@@ -3509,10 +3509,10 @@ iconv-lite@0.4.24:
   dependencies:
     safer-buffer ">= 2.1.2 < 3"
 
-icox@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/icox/-/icox-0.0.1.tgz#bfa8f054e4d57e8ac8ca1474d09d79d0185e3c29"
-  integrity sha512-Amn6iZsc37lejypqHA9XaH1WqKwHN2yi+LnJ/buaSE4A12ED8zVHZYCrUDjEhdnupbq09utWhanlPknEsE5l7A==
+icox@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/icox/-/icox-0.1.0.tgz#ccb15e8e2b0d97b5aedfc1e42ade2823a26d3c62"
+  integrity sha512-Z0othDyrNfvYvWcFT6uxFf919H7a58yB6FgFSk4UPiRGJzTQsjZ7km3ef5AtmPgHmE++N9EtED2nyuucx/hWOA==
   dependencies:
     "@types/lodash" "^4.14.184"
     dplayer "^1.27.0"
