@@ -3,9 +3,8 @@
     <DialogLayer />
   </template>
 <script setup lang="ts">
-import { TreeRender, DialogLayer } from "@bilibili-bbq/cox"
+import { TreeRender, DialogLayer, useSidebarTree } from "icox"
 import { reactive } from "vue";
-import { useSidebarTree } from '../lib-src'
 const state = reactive({ loading: true })
 const renderTree = useSidebarTree()
 

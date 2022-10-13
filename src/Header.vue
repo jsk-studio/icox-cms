@@ -18,7 +18,7 @@
   <script setup lang="ts">
   import { computed } from 'vue';
   import { useRoute } from 'vue-router';
-  import { useState, useMutations, COX_MODLE_APP } from "@bilibili-bbq/cox"
+  import { useState, useMutations, COX_MODLE_APP } from "icox"
   const route = useRoute()
   const { collapse } = useState(COX_MODLE_APP, ['collapse'])
   const { toggleCollapse } = useMutations(COX_MODLE_APP, ['toggleCollapse'])

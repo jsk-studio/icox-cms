@@ -1,9 +1,8 @@
 import { mergeBizMaterialList, mergeBizMaterialDetail } from './utils'
 import { cloneDeep } from 'lodash'
-import { tryCall, createCombineList, FaasParams } from '@bilibili-bbq/cox'
+import { tryCall, createCombineList, FaasParams, getCoxAppState } from 'icox'
 import { page_list_raw } from './mapping'
 import { x_array } from './x'
-import { getCoxAppState } from '@bilibili-bbq/cox'
 
 // const { store, router, page_list = {} } = common
 

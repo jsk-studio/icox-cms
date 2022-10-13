@@ -1,5 +1,5 @@
 import './register'
-import { createCoxApp } from '@bilibili-bbq/cox'
+import { createCoxApp } from 'icox'
 import App from "./App.vue";
 import { sidebar } from './sidebar'
 import { router } from './router'

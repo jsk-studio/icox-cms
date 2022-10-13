@@ -1,7 +1,6 @@
-import { createCombineList, FaasParams } from '@bilibili-bbq/cox'
+import { createCombineList, FaasParams, getCoxAppState } from 'icox'
 import { mergeBizMaterialList } from './utils'
 // import CoverSort from '@/components/base/sort/CoverSort.vue'
-import { getCoxAppState } from '@bilibili-bbq/cox'
 
 type ISortContext = FaasParams & {
     params: { query: any } // sort 页 query, 如 pager 信息

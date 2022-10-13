@@ -1,6 +1,5 @@
-import { tryCall, createCombineList, FaasParams } from '@bilibili-bbq/cox'
+import { tryCall, createCombineList, FaasParams, getCoxAppState } from 'icox'
 import { mergeBizMaterialList, mergeBizMaterialDetail } from './utils'
-import { getCoxAppState } from '@bilibili-bbq/cox'
 
 // const { store, router, page_detail = {} } = common
 

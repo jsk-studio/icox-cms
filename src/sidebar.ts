@@ -1,4 +1,4 @@
-import { defineSidebarRouter } from '@bilibili-bbq/cox'
+import { defineSidebarRouter } from 'icox'
 
 const routes = [{
     name: 'MaterialList',

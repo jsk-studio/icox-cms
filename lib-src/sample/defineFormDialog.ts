@@ -1,5 +1,5 @@
 import { cloneDeep } from 'lodash'
-import { tryCall, createCombineList, getCoxAppState } from '@bilibili-bbq/cox'
+import { tryCall, createCombineList, getCoxAppState } from 'icox'
 import { mergeBizMaterialList, mergeBizMaterialDetail } from './utils'
 
 type IDefineFormDialogAttrs = {
