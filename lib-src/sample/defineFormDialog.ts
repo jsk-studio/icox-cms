@@ -1,6 +1,7 @@
 import { cloneDeep } from 'lodash'
 import { tryCall, createCombineList, getCoxAppState } from 'icox'
-import { mergeBizMaterialList, mergeBizMaterialDetail } from './utils'
+import { mergeBizMaterialList } from './utils'
+import { deepMerge, COX_MODLE_FAAS } from 'icox'
 
 type IDefineFormDialogAttrs = {
     title?: string, // 弹窗标题
@@ -21,11 +22,12 @@ export type IDefineFormDialog = {
 }
 
 export function defineFormDialog(opts: IDefineFormDialog) {
+    const coxState = getCoxAppState()
+    const coxFaasState = getCoxAppState(COX_MODLE_FAAS)
     if (!opts.pool) {
         // @ts-ignore
-        opts.pool = cloneDeep(store.state['[scope]faas'].pool)
+        opts.pool = cloneDeep(coxFaasState.pool)
     }
-    const coxState = getCoxAppState()
     opts.pool.flavors = [
         coxState.renders.dialog_form,
         ...opts.pool?.flavors,
@@ -65,6 +67,24 @@ export function defineFormDialog(opts: IDefineFormDialog) {
                 list: mergeBizMaterialList(getCombineList, 'form'),
             },
         }]
+    }
+}
+
+
+export function showFormDialog(ctx: any) {
+    return async (dialogRaw: any) => {
+        const { row } = ctx
+        const dialogAttrs = {
+            attrs: {
+                title: ctx.def.text,
+            },
+            source: row && cloneDeep(row),
+        }
+        const newAttrs = await tryCall(dialogRaw, ctx)
+        const dialog = defineFormDialog(
+            deepMerge(dialogAttrs, newAttrs)
+        )
+        return await ctx.showDialog(dialog)
     }
 }
 
